@@ -1,0 +1,8 @@
+class CreateObras < ActiveRecord::Migration
+  def change
+    create_table :obras do |t|
+
+      t.timestamps
+    end
+  end
+end

@@ -1,4 +1,6 @@
 GlobalTech::Application.routes.draw do
+  resources :obras
+
   resources :clientes
 
   # The priority is based upon order of creation:

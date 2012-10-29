@@ -1,0 +1,50 @@
+<%= form_for @obra, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :cliente_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :cliente_id, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :endereco, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :endereco, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :responsavel, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :responsavel, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :valor, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :valor, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :inicio, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :inicio, :class => 'date_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :final, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :final, :class => 'date_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :gasto, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :gasto, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                obras_path, :class => 'btn' %>
+  </div>
+<% end %>
