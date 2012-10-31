@@ -1,19 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  nome: MyString
-  cpf: MyString
-  cnpj: MyString
-  email: MyString
-  endereco: MyString
-  cidade: MyString
-  estado: MyString
+fernando:
+  nome: Fernando Braz
+  cpf: 123645738-01
+  cnpj:
+  email: frsilv@gmail.com
+  endereco: rua desenhista luiz guimaraes numero 70
+  cidade: rio de janeiro
+  estado: RJ
 
-two:
-  nome: MyString
-  cpf: MyString
-  cnpj: MyString
-  email: MyString
-  endereco: MyString
-  cidade: MyString
-  estado: MyString
+reanult:
+  nome: Renault Rodrigues
+  cpf: 3456789987
+  cnpj:
+  email: renault.rodrigues@gmail.com
+  endereco: rua desenhista luiz guimaraes numero 70
+  cidade: rio de janeiro
+  estado: RJ

@@ -4,8 +4,16 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+cimento:
+ nome: Cimento
+ valor: 50
+ und_medida: sacas
+ created_at:      <%= 6.months.ago.to_s(:db) %>
+ updated_at:      <%= 6.months.ago.to_s(:db) %>
+
+cano:
+ nome: Cano PVC
+ valor: 10
+ und_medida: metro(s)
+ created_at:      <%= 6.months.ago.to_s(:db) %>
+ updated_at:      <%= 6.months.ago.to_s(:db) %>

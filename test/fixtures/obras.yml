@@ -4,8 +4,20 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+obra_do_cliente_fernando:
+ cliente: fernando
+ endereco: Rua Desenhista Luiz Guimarães
+ responsavel: Pablo
+ inicio: <%= DateTime.now.to_s(:db) %>
+ final: <%= DateTime.now.tomorrow.to_s(:db) %>
+ created_at:      <%= 6.months.ago.to_s(:db) %>
+ updated_at:      <%= 6.months.ago.to_s(:db) %>
+
+obra_do_cliente_Renault:
+ cliente: renault
+ endereco: Rua Desenhista Luiz Guimarães
+ responsavel: Pablo
+ inicio: <%= DateTime.now.to_s(:db) %>
+ final: <%= DateTime.now.tomorrow.to_s(:db) %>
+ created_at:      <%= 6.months.ago.to_s(:db) %>
+ updated_at:      <%= 6.months.ago.to_s(:db) %>
