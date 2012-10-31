@@ -1,11 +1,15 @@
 GlobalTech::Application.routes.draw do
   resources :materials
 
-  resources :obras
+  resources :obras do
+    resources :materials, controller: :materials_obras
+  end
+
 
   resources :clientes
 
   root :to => 'clientes#index'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

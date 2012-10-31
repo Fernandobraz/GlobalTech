@@ -1,0 +1,16 @@
+<div class="container_16">
+  <%= action_title "Materiais a serem usados na obra" %>
+
+  <% path = obra_material_path(@obra) %>
+  <%= form_for @obra, url: path, method: :put do |f| %>
+  <ul id="materiais">
+  <% @materials.each do |material| %>
+    <li class="material">
+      <%= label_tag "obra_material_id_#{material.id}", material.nome %>
+      <%= check_box_tag 'obra[material_ids][]', material.id, @obra.material_ids.include?(material.id), id: "obra_material_id_#{material.id}" %>
+    </li>
+    <% end %>
+  </ul>
+  <%= f.submit "Salvar", disable_with: 'Salvando...' %>
+<% end %>
+</div>

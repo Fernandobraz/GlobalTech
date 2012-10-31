@@ -25,6 +25,7 @@ class ObrasController < ApplicationController
   # GET /obras/new
   # GET /obras/new.json
   def new
+    @clientes = Cliente.all
     @obra = Obra.new
 
     respond_to do |format|
@@ -35,6 +36,7 @@ class ObrasController < ApplicationController
 
   # GET /obras/1/edit
   def edit
+    @clientes = Cliente.all
     @obra = Obra.find(params[:id])
   end
 

@@ -12,6 +12,7 @@
       <th><%= model_class.human_attribute_name(:inicio) %></th>
       <th><%= model_class.human_attribute_name(:final) %></th>
       <th><%= model_class.human_attribute_name(:gasto) %></th>
+      <th>Materiais</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -25,14 +26,15 @@
         <td><%= obra.inicio %></td>
         <td><%= obra.final %></td>
         <td><%= obra.gasto %></td>
+        <td><%= button_to 'Adicionar', new_obra_material_path(obra), :class => 'btn btn-small', remote: true %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_obra_path(obra), :class => 'btn btn-mini' %>
+                      edit_obra_path(obra), :class => 'btn btn-small' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       obra_path(obra),
                       :method => :delete,
                       :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
-                      :class => 'btn btn-mini btn-danger' %>
+                      :class => 'btn btn-small btn-danger' %>
         </td>
       </tr>
     <% end %>

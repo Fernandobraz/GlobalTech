@@ -19,8 +19,8 @@
     <% @clientes.each do |cliente| %>
       <tr>
         <td><%= cliente.nome %></td>
-        <td><%= cliente.cpf %></td>
-        <td><%= cliente.cnpj %></td>
+        <td><%= cliente.cpf == "" ? "-" : cliente.cpf %></td>
+        <td><%= cliente.cnpj == "" ? "-" : cliente.cnpj %></td>
         <td><%= cliente.email %></td>
         <td><%= cliente.endereco %></td>
         <td><%= cliente.cidade %></td>
